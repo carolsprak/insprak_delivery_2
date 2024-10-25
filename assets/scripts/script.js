@@ -47,7 +47,7 @@ function fazerLogin(event) {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
   
-    fetch('http://localhost:4589/login', {
+    fetch('https://insprak-delivery-api-2-b52a0a874994.herokuapp.com/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
