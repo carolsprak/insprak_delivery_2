@@ -26,7 +26,7 @@ function cadastrarUsuario(event) {
     console.log(userData);
 
     // Simulação de requisição AJAX (substitua pelo método adequado)
-    fetch('http://localhost:4589/users', {
+    fetch('https://insprak-delivery-api-2-b52a0a874994.herokuapp.com/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

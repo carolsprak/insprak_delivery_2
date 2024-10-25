@@ -100,7 +100,7 @@ function fazerLogin(event) {
 // Função para obter dados do usuário por ID
 function getUserById(userId) {
 
-  fetch(`http://localhost:4589/users/${userId}`)
+  fetch(`https://insprak-delivery-api-2-b52a0a874994.herokuapp.com/users/${userId}`)
       .then(response => {
           if (!response.ok) {
               throw new Error('Erro ao buscar usuário');
