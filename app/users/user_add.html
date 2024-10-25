@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Insprak Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Insprak Delivery</h1>
+        <nav>
+            <a href="../../index.html">Entrar</a>
+            <a href="#">Cadastro</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <div class="form-container">
+            <h2>Cadastrar Usuário</h2>
+            <form id="registerForm" method="POST" action="http://localhost:4589/users">
+                <label for="firstName">Nome:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Sobrenome:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="cpfCnpj">CPF/CNPJ:</label>
+                <input type="text" id="cpfCnpj" name="cpfCnpj" required>
+                <label for="birthDate">Data de Nascimento:</label>
+                <input type="date" id="birthDate" name="birthDate" required>
+
+                <label>Perfis:</label>
+                <div class="profile-checkboxes">
+                    <label><input type="checkbox" name="profiles" value="Cliente"> Cliente</label>
+                    <label><input type="checkbox" name="profiles" value="Entregador"> Entregador</label>
+                    <label><input type="checkbox" name="profiles" value="Dono de Restaurante"> Dono de Restaurante</label>
+                </div>
+
+                <h2>Endereço Principal:</h2>
+                <label for="street">Rua:</label>
+                <input type="text" id="street" name="addresses[0].street" required>
+                <label for="number">Número:</label>
+                <input type="text" id="number" name="addresses[0].number" required>
+                <label for="complement">Complemento:</label>
+                <input type="text" id="complement" name="addresses[0].complement">
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" name="addresses[0].city" required>
+                <label for="state">Estado:</label>
+                <input type="text" id="state" name="addresses[0].state" required>
+                <label for="zipCode">CEP:</label>
+                <input type="text" id="zipCode" name="addresses[0].zipCode" required>
+                 
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            <script src="script.js"></script>
+        </div>
+    </div>
+
+    <footer>
+        <p class="version">&copy; 2024 Insprak. Todos os direitos reservados. v1.0.0</p> 
+      </footer>
+</body>
+</html>
